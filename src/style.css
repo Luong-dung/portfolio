@@ -158,8 +158,50 @@ h1 {
 
 .hero-actions {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 25px;
+}
+
+.cv-downloads {
+  margin-top: 26px;
+}
+
+.cv-downloads p {
+  margin-bottom: 10px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.cv-downloads p span {
+  margin-left: 8px;
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 400;
+}
+
+.cv-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.cv-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 44px;
+  gap: 16px;
+  padding: 10px 14px;
+  border: 1px solid #d9dacd;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  transition: background 160ms ease;
+}
+
+.cv-link:hover {
+  background: var(--accent);
 }
 
 .button {
