@@ -71,6 +71,17 @@ function App() {
                 Kết nối với mình
               </a>
             </div>
+            <div className="cv-downloads" aria-label="Tải CV PDF">
+              <p>Tải CV <span>PDF · Tiếng Anh</span></p>
+              <div className="cv-links">
+                <a className="cv-link" href={`${import.meta.env.BASE_URL}cv/CV_Luong_Dung_Software_Algorithm.pdf`} download>
+                  Software / Algorithm <span aria-hidden="true">↓</span>
+                </a>
+                <a className="cv-link" href={`${import.meta.env.BASE_URL}cv/CV_Luong_Dung_AI_ML_Data.pdf`} download>
+                  AI / ML / Data <span aria-hidden="true">↓</span>
+                </a>
+              </div>
+            </div>
           </div>
 
           <div className="hero-art" aria-label="Minh họa giao diện portfolio" role="img">
@@ -162,7 +173,7 @@ function App() {
               <a className="button button-light" href="mailto:dung.luongtien@example.com">
                 dung.luongtien@example.com <ArrowIcon diagonal />
               </a>
-              <span className="email-note">Hoặc kết nối qua GitHub: github.com/luongtiendung</span>
+              <a className="email-note text-link" href="https://github.com/Luong-dung" target="_blank" rel="noopener noreferrer">GitHub: github.com/Luong-dung <ArrowIcon diagonal /></a>
             </div>
           </div>
         </section>
