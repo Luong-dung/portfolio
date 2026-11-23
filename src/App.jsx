@@ -88,7 +88,7 @@ function App() {
             <h1>
               Xin chào,
               <br />
-              mình là <span className="highlight">Lương Tiến Dũng.</span>
+              mình là <span className="highlight">Lường Tiến Dũng.</span>
             </h1>
             <p className="hero-description">
               Mình là sinh viên Khoa học Dữ liệu có niềm đam mê đặc biệt với giải thuật,
@@ -154,7 +154,7 @@ function App() {
             </p>
             <div className="about-detail">
               <p>
-                Xin chào, mình là Lương Tiến Dũng. Mình hiện đang theo học ngành Khoa học dữ liệu tại Trường Đại học Khoa học Tự nhiên (HUS). Mình có thế mạnh về tư duy thuật toán, lập trình thi đấu (Competitive Programming) và xử lý dữ liệu.
+                Xin chào, mình là Lường Tiến Dũng. Mình hiện đang theo học ngành Khoa học dữ liệu tại Trường Đại học Khoa học Tự nhiên (HUS). Mình có thế mạnh về tư duy thuật toán, lập trình thi đấu (Competitive Programming) và xử lý dữ liệu.
               </p>
               <p>
                 Mục tiêu của mình là trở thành một Data Scientist / AI Engineer, ứng dụng thế mạnh thuật toán để xây dựng các mô hình học máy hiệu quả.
@@ -221,7 +221,7 @@ function App() {
       <footer className="site-footer">
         <a className="wordmark" href="#home">portfolio<span>.</span></a>
         <p>Được làm với tư duy thuật toán và một chút cà phê.</p>
-        <span>© {new Date().getFullYear()} Lương Tiến Dũng</span>
+        <span>© {new Date().getFullYear()} Lường Tiến Dũng</span>
       </footer>
     </>
   );

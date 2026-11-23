@@ -1,4 +1,4 @@
-# Portfolio — Lương Tiến Dũng
+# Portfolio — Lường Tiến Dũng
 
 Trang cá nhân giới thiệu dự án, thành tích lập trình thi đấu và CV.
 
