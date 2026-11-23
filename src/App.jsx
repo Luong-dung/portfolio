@@ -1,34 +1,65 @@
 const projects = [
   {
     number: "01",
-    category: "Thành tích · Thuật toán",
-    name: "Giải Ba OLP Tin học SV",
+    category: "Dự án · Thuật toán",
+    name: "N-Puzzle cỡ lớn",
     description:
-      "Giải Ba khối Chuyên Tin tại kỳ thi Olympic Tin học Sinh viên Việt Nam, năm 2025.",
+      "Thiết kế chiến lược macro tách hàng/cột xen kẽ, BFS dự phòng. Giải 21/30 bảng 1000 × 1000 trong 10 giây / 1 GB RAM. C++.",
     className: "project-card--peach",
-    mark: "🏆",
+    mark: "🧩",
   },
   {
     number: "02",
-    category: "Thành tích · Thuật toán",
-    name: "Giải Khuyến khích OLP",
+    category: "Dự án · Machine Learning",
+    name: "Nhận dạng ngôn ngữ ký hiệu",
     description:
-      "Giải Khuyến khích khối Chuyên Tin tại kỳ thi Olympic Tin học Sinh viên Việt Nam, năm 2025.",
+      "Pipeline PyTorch phân loại video 100 lớp: CNN pretrained + Transformer theo thời gian. Macro-F1 0.7457 trên private test OLP AI 2025.",
     className: "project-card--blue",
-    mark: "🎖️",
+    mark: "🤟",
   },
   {
     number: "03",
+    category: "Thành tích · ICPC",
+    name: "Huy chương Đồng ICPC",
+    description: "Huy chương Đồng kỳ thi ICPC Vietnam National Programming Contest, năm 2026.",
+    className: "project-card--yellow",
+    mark: "🥉",
+  },
+  {
+    number: "04",
+    category: "Thành tích · OLP",
+    name: "Giải Ba OLP Tin học SV",
+    description:
+      "Giải Ba khối Chuyên Tin tại kỳ thi Olympic Tin học Sinh viên Việt Nam, năm 2025.",
+    className: "project-card--blue",
+    mark: "🏆",
+  },
+  {
+    number: "05",
+    category: "Thành tích · OLP",
+    name: "Giải Khuyến khích OLP",
+    description:
+      "Giải Khuyến khích khối Chuyên Tin tại kỳ thi Olympic Tin học Sinh viên Việt Nam, năm 2024.",
+    className: "project-card--yellow",
+    mark: "🎖️",
+  },
+  {
+    number: "06",
     category: "Học vấn · HUS",
     name: "Khoa học Dữ liệu",
     description:
-      "Sinh viên ngành Khoa học Dữ liệu tại Trường ĐH Khoa học Tự nhiên (ĐHQGHN), khóa 2022 - 2026.",
-    className: "project-card--yellow",
+      "Sinh viên năm ba ngành Khoa học Dữ liệu, Trường ĐH Khoa học Tự nhiên (ĐHQGHN). Dự kiến tốt nghiệp 2028, GPA 3.11/4.0.",
+    className: "project-card--peach",
     mark: "🎓",
   },
 ];
 
-const skills = ["C++", "Python", "SQL", "Pandas", "NumPy", "Scikit-learn", "Git", "Linux"];
+const stats = [
+  { label: "LeetCode", value: "1807", note: "280 bài", href: "https://leetcode.com/u/__covetot__/" },
+  { label: "AtCoder", value: "1610", note: "rating cao nhất" },
+];
+
+const skills = ["C++", "Python", "SQL", "PyTorch", "OpenCV", "Pandas", "NumPy", "Git", "Linux"];
 
 function ArrowIcon({ diagonal = false }) {
   return <span aria-hidden="true">{diagonal ? "↗" : "→"}</span>;
@@ -128,6 +159,14 @@ function App() {
               <p>
                 Mục tiêu của mình là trở thành một Data Scientist / AI Engineer, ứng dụng thế mạnh thuật toán để xây dựng các mô hình học máy hiệu quả.
               </p>
+              <dl className="stat-list">
+                {stats.map((stat) => (
+                  <div className="stat" key={stat.label}>
+                    <dt>{stat.href ? <a href={stat.href} target="_blank" rel="noopener noreferrer">{stat.label} ↗</a> : stat.label}</dt>
+                    <dd><strong>{stat.value}</strong> {stat.note}</dd>
+                  </div>
+                ))}
+              </dl>
               <div className="skill-list" aria-label="Công nghệ và kỹ năng">
                 {skills.map((skill) => <span className="skill-chip" key={skill}>{skill}</span>)}
               </div>
@@ -139,9 +178,9 @@ function App() {
           <div className="section-heading projects-heading">
             <div>
               <p className="eyebrow">02 / CHỌN LỌC</p>
-              <h2>Thành tích & Học vấn<span className="highlight">.</span></h2>
+              <h2>Dự án &amp; Thành tích<span className="highlight">.</span></h2>
             </div>
-            <p className="heading-note">Những cột mốc mình đạt được<br />trong thời gian qua.</p>
+            <p className="heading-note">Dự án tiêu biểu và những cột mốc<br />mình đạt được.</p>
           </div>
           <div className="project-grid">
             {projects.map((project) => (
@@ -156,7 +195,6 @@ function App() {
                     <p className="project-category">{project.category}</p>
                     <h3>{project.name}</h3>
                   </div>
-                  <span className="project-arrow" aria-hidden="true"><ArrowIcon diagonal /></span>
                 </div>
                 <p className="project-description">{project.description}</p>
               </article>
@@ -170,10 +208,11 @@ function App() {
             <h2>Cùng tạo nên<br />điều gì đó <span className="highlight">hay ho.</span></h2>
             <div className="contact-aside">
               <p>Bạn có một ý tưởng, một cơ hội hoặc chỉ muốn chào hỏi? Hộp thư của mình luôn mở.</p>
-              <a className="button button-light" href="mailto:dung.luongtien@example.com">
-                dung.luongtien@example.com <ArrowIcon diagonal />
+              <a className="button button-light" href="mailto:luongdung90050101@gmail.com">
+                luongdung90050101@gmail.com <ArrowIcon diagonal />
               </a>
               <a className="email-note text-link" href="https://github.com/Luong-dung" target="_blank" rel="noopener noreferrer">GitHub: github.com/Luong-dung <ArrowIcon diagonal /></a>
+              <a className="email-note text-link" href="https://leetcode.com/u/__covetot__/" target="_blank" rel="noopener noreferrer">LeetCode: leetcode.com/u/__covetot__ <ArrowIcon diagonal /></a>
             </div>
           </div>
         </section>

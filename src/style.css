@@ -447,6 +447,36 @@ h1 {
   line-height: 1.9;
 }
 
+.stat-list {
+  display: flex;
+  gap: 28px;
+  margin: 0 0 22px;
+}
+
+.stat dt {
+  margin-bottom: 4px;
+  color: #77786f;
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.08em;
+}
+
+.stat dt a {
+  color: inherit;
+}
+
+.stat dd {
+  margin: 0;
+  color: #77786f;
+  font-size: 11px;
+}
+
+.stat dd strong {
+  color: #282923;
+  font-size: 24px;
+  letter-spacing: -0.04em;
+}
+
 .skill-list {
   display: flex;
   flex-wrap: wrap;
