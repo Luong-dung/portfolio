@@ -56,7 +56,7 @@ const projects = [
 
 const stats = [
   { label: "LeetCode", value: "1807", note: "280 bài", href: "https://leetcode.com/u/__covetot__/" },
-  { label: "AtCoder", value: "1610", note: "rating cao nhất" },
+  { label: "AtCoder", value: "1610", note: "rating cao nhất", href: "https://atcoder.jp/users/Luongdung" },
 ];
 
 const skills = ["C++", "Python", "SQL", "PyTorch", "OpenCV", "Pandas", "NumPy", "Git", "Linux"];
@@ -213,6 +213,7 @@ function App() {
               </a>
               <a className="email-note text-link" href="https://github.com/Luong-dung" target="_blank" rel="noopener noreferrer">GitHub: github.com/Luong-dung <ArrowIcon diagonal /></a>
               <a className="email-note text-link" href="https://leetcode.com/u/__covetot__/" target="_blank" rel="noopener noreferrer">LeetCode: leetcode.com/u/__covetot__ <ArrowIcon diagonal /></a>
+              <a className="email-note text-link" href="https://atcoder.jp/users/Luongdung" target="_blank" rel="noopener noreferrer">AtCoder: atcoder.jp/users/Luongdung <ArrowIcon diagonal /></a>
             </div>
           </div>
         </section>
